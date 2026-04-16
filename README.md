@@ -195,16 +195,25 @@ Vite 的配置文件，使用 TypeScript 编写，提供完整的类型支持。
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// 使用 defineConfig 获得类型提示
+// https://vite.dev/config/
 export default defineConfig({
-  // 插件数组：使用 React 插件
+  // 项目基础路径，默认为 '/'
+  // 用于部署到子路径时使用，例如：'/vite-app/'
+  base: '/',
+
+  // 开发服务器配置
+  server: {
+    // 开发服务器端口，默认为 5173
+    port: 5174,
+    
+    // 启动时自动打开浏览器
+    open: true
+  },
+
+  // 插件配置
   plugins: [react()],
-  
-  // 常用配置项（可逐步添加）：
-  // server: { port: 3000 },          // 开发服务器端口
-  // build: { outDir: 'build' },      // 输出目录
-  // resolve: { alias: { '@': '/src' } } // 路径别名
 })
+
 ```
 
 ### 4.2 package.json - 项目依赖与脚本配置
