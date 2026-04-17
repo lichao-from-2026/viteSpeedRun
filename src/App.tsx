@@ -6,6 +6,14 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  
+  // 使用环境变量
+  const appName = import.meta.env.VITE_APP_NAME
+  const appVersion = import.meta.env.VITE_APP_VERSION
+  const apiUrl = import.meta.env.VITE_API_URL
+  const isDebug = import.meta.env.VITE_DEBUG === 'true'
+  const featureFlag = import.meta.env.VITE_FEATURE_FLAG === 'true'
+  const isDevelopment = import.meta.env.DEV
 
   return (
     <>
@@ -16,7 +24,16 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>{appName}</h1>
+          <p>
+            版本: {appVersion} | 环境: {isDevelopment ? '开发环境' : '生产环境'}
+          </p>
+          <p>
+            API 地址: {apiUrl}
+          </p>
+          <p>
+            调试模式: {isDebug ? '开启' : '关闭'} | 特性开关: {featureFlag ? '开启' : '关闭'}
+          </p>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
