@@ -1,8 +1,12 @@
+// 应用入口文件
+// 负责渲染 React 应用到 DOM 中
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
+// 获取根 DOM 元素并渲染 React 应用
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

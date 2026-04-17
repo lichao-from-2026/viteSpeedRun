@@ -1,25 +1,54 @@
 {
   "compilerOptions": {
+    // 增量编译信息文件路径
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // 目标 ECMAScript 版本
     "target": "es2023",
+    // 编译过程中需要引入的库文件
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    // 生成的模块代码格式
     "module": "esnext",
+    // 需要包含的类型声明文件
     "types": ["vite/client"],
+    // 跳过所有声明文件（.d.ts）的类型检查
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Bundler mode - 打包器模式配置 */
+    // 模块解析策略，使用 bundler 模式适配打包工具
     "moduleResolution": "bundler",
+    // 允许导入时使用文件扩展名
     "allowImportingTsExtensions": true,
+    // 严格检查 import/export 语法
     "verbatimModuleSyntax": true,
+    // 强制模块检测
     "moduleDetection": "force",
+    // 不生成输出文件（仅做类型检查）
     "noEmit": true,
+    // JSX 代码转换方式，使用 React 17+ 的新 JSX 转换
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Path Mapping - 路径映射配置 */
+    // 解析非相对路径的基础目录
+    "baseUrl": ".",
+    // 路径别名配置，简化模块导入路径
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@assets/*": ["./src/assets/*"]
+    },
+
+    /* Linting - 代码检查配置 */
+    // 禁止定义未使用的局部变量
     "noUnusedLocals": true,
+    // 禁止定义未使用的函数参数
     "noUnusedParameters": true,
+    // 不允许使用会被擦除的类型相关语法
     "erasableSyntaxOnly": true,
+    // 禁止 switch 语句中出现贯穿的 case
     "noFallthroughCasesInSwitch": true
   },
+  // 需要编译的文件或目录
   "include": ["src"]
 }

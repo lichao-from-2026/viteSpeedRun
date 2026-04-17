@@ -3,6 +3,8 @@
 > ⚠️ 重要：所有项目操作必须严格遵守以下规范！
 >
 > - 先读取 .trae/CONTEXT.md → 再读取 .trae/CONSTRAINTS.md → 然后理解任务 → 最后执行操作
+> - Vite 配置文件（vite.config.ts）和 TypeScript 配置文件（tsconfig.json、tsconfig.app.json 等）必须补充中文注释，说明每个配置项的作用
+> - 生成的代码和 Vite 配置文件字段必须标注详细的中文注释
 
 ***
 
