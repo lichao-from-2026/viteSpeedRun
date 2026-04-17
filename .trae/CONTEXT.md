@@ -5,6 +5,8 @@
 > - 每次对话前，请先先读取 .trae/CONTEXT.md → 再读取 .trae/CONSTRAINTS.md → 然后理解任务 → 最后执行操作
 > - 所有操作必须遵守 .trae/CONSTRAINTS.md 中的约束规范
 > - 生成的代码 和 Vite配置文件字段 必须标注 详细的中文注释
+>
+> 🔴 **重要提醒：请使用 `vite-speedrun-init` 技能来初始化每次对话，确保不会遗忘关键步骤！**
 
 ***
 

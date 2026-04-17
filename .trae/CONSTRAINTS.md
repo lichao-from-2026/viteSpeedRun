@@ -5,6 +5,8 @@
 > - 先读取 .trae/CONTEXT.md → 再读取 .trae/CONSTRAINTS.md → 然后理解任务 → 最后执行操作
 > - Vite 配置文件（vite.config.ts）和 TypeScript 配置文件（tsconfig.json、tsconfig.app.json 等）必须补充中文注释，说明每个配置项的作用
 > - 生成的代码和 Vite 配置文件字段必须标注详细的中文注释
+>
+> 🔴 **重要提醒：请使用 `vite-speedrun-init` 技能来初始化每次对话，确保不会遗忘关键步骤！**
 
 ***
 
