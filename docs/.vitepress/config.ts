@@ -92,7 +92,16 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概述', link: '/plugins/' },
-            { text: '1. 插件入门', link: '/plugins/1. 插件入门' },
+            {
+              text: '1. 插件入门',
+              collapsed: false,
+              items: [
+                { text: '1. 插件入门（含 自定义插件示例 和 第三方插件集成）', link: '/plugins/1. 插件入门/1. 插件入门' },
+                { text: '2. 基本结构和钩子机制', link: '/plugins/1. 插件入门/2. 基本结构和钩子机制' },
+                { text: '3. 插件开发思路', link: '/plugins/1. 插件入门/3. 插件开发思路' },
+                { text: '4. 最佳实践和调试技巧', link: '/plugins/1. 插件入门/4. 最佳实践和调试技巧' }
+              ]
+            },
             { text: '2. 基础插件开发', link: '/plugins/2. 基础插件开发' },
             { text: '3. 高级插件开发', link: '/plugins/3. 高级插件开发' }
           ]
