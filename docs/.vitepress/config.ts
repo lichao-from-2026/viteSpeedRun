@@ -92,7 +92,9 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概述', link: '/plugins/' },
-            { text: '1. 插件入门', link: '/plugins/1. 插件入门' }
+            { text: '1. 插件入门', link: '/plugins/1. 插件入门' },
+            { text: '2. 基础插件开发', link: '/plugins/2. 基础插件开发' },
+            { text: '3. 高级插件开发', link: '/plugins/3. 高级插件开发' }
           ]
         },
       ],
@@ -105,6 +107,18 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概述', link: '/internals/' },
+            { text: '1. Vite 整体架构', link: '/internals/1. 整体架构' },
+            { text: '2. 依赖预构建', link: '/internals/2. 依赖预构建' },
+            { text: '3. ES Module 模块解析', link: '/internals/3. 模块解析' },
+            { text: '4. 热模块替换（HMR）原理', link: '/internals/4. HMR 原理' },
+            { text: '5. 缓存机制', link: '/internals/5. 缓存机制' },
+            { text: '6. 静态资源与 CSS 处理', link: '/internals/6. 静态资源与 CSS 处理' },
+            { text: '7. TypeScript 处理', link: '/internals/7. TypeScript 处理' },
+            { text: '8. 插件系统架构', link: '/internals/8. 插件系统架构' },
+            { text: '9. 生产构建（Rollup）', link: '/internals/9. 生产构建' },
+            { text: '10. 虚拟模块系统', link: '/internals/10. 虚拟模块系统' },
+            { text: '11. 环境变量与模式', link: '/internals/11. 环境变量与模式' },
+            { text: '12. 源码阅读指南', link: '/internals/12. 源码阅读指南' }
           ]
         },
       ],
