@@ -6,7 +6,7 @@
 > - 所有操作必须遵守 .trae/CONSTRAINTS.md 中的约束规范
 > - 生成的代码 和 Vite配置文件字段 必须标注 详细的中文注释
 >
-> 🔴 **重要提醒：请使用 `vite-speedrun-init` 技能来初始化每次对话，确保不会遗忘关键步骤！**
+> 🔴 **重要提醒：请使用** **`vite-speedrun-init`** **技能来初始化每次对话，确保不会遗忘关键步骤！**
 
 ***
 
@@ -90,21 +90,28 @@
 
 #### 3. 进阶配置
 
-- [ ] build.rollupOptions 深度配置
-  - [ ] 分割代码
-  - [ ] 外部依赖排除
-  - [ ] 自定义输出格式
-- [ ] 优化打包体积
-  - [ ] tree-shaking 开启
-  - [ ] 代码分割
-  - [ ] 压缩 JS/CSS
-  - [ ] 图片压缩与懒加载
-- [ ] 多页面配置（multi-page）
-  - [ ] 实操搭建一个多页面 Vite 项目
-  - [ ] 配置多个入口文件
-- [ ] SSR（服务端渲染）入门
-  - [ ] 了解 Vite 对 SSR 的支持
-  - [ ] 实操搭建一个简单的 Vue3 SSR 项目（基于 Vite）
+- [x] 库模式构建
+  - [x] 库编写
+  - [x] Vite配置等发布准备
+  - [x] 打包构建
+  - [x] 发布包
+  - [x] 安装/引用包
+- [x] build.lib 深度配置
+  - [x] entry、name、fileName、formats
+- [x] build.rollupOptions 深度配置
+  - [x] external、globals、manualChunks
+  - [x] 自定义输出格式
+- [x] 优化打包体积
+  - [x] tree-shaking 开启
+  - [x] 代码分割
+  - [x] 压缩 JS/CSS
+  - [x] 图片压缩与懒加载
+- [x] 多页面配置（multi-page）
+  - [x] 实操搭建一个多页面 Vite 项目
+  - [x] 配置多个入口文件
+- [x] SSR（服务端渲染）入门
+  - [x] 了解 Vite 对 SSR 的支持
+  - [x] 实操搭建一个简单的 React SSR 项目（基于 Vite）
 
 ***
 
@@ -112,15 +119,15 @@
 
 #### 1. 插件入门
 
-- [ ] 作用
-- [ ] 常用插件的安装与使用
-- [ ] Vite 插件的基本结构与钩子机制
-  - [ ] config
-  - [ ] resolveId
-  - [ ] load
-  - [ ] transform 等
-- [ ] 自定义插件示例
-- [ ] 第三方插件集成
+- [x] 作用
+- [x] 常用插件的安装与使用
+- [x] Vite 插件的基本结构与钩子机制
+  - [x] config
+  - [x] resolveId
+  - [x] load
+  - [x] transform 等
+- [x] 自定义插件示例
+- [x] 第三方插件集成
 
 #### 2. 基础插件开发
 
@@ -197,4 +204,26 @@
 | 实操篇 | ./docs/examples/  | 环境变量配置、核心配置、进阶配置                  |
 | 插件篇 | ./docs/plugins/   | 插件入门、基础插件开发、高级插件开发                |
 | 原理篇 | ./docs/internals/ | Vite 核心原理、HMR 原理、Rollup 打包原理、源码阅读 |
+
+***
+
+## 文档创建规则
+
+### 实操篇文档创建规则
+
+#### 入门文档和核心配置文档
+
+- 环境变量配置文档：`docs/examples/1. 环境变量配置.md`
+- 核心配置文档：`docs/examples/2. 核心配置.md`
+
+#### 进阶配置文档创建规则
+
+进阶配置文档创建在 `docs/examples/3. 进阶配置/` 文件夹下，序号为文件夹下的文档序号的顺延。
+
+**示例：**
+
+- 第 1 个进阶配置文档：`docs/examples/3. 进阶配置/1. 库模式 & build 深度配置.md`
+- 第 2 个进阶配置文档：`docs/examples/3. 进阶配置/2. 优化打包体积.md`
+- 第 3 个进阶配置文档：`docs/examples/3. 进阶配置/3. 多页面配置.md`
+- 以此类推...
 

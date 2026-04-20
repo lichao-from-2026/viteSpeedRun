@@ -70,7 +70,16 @@ export default defineConfig({
           items: [
             { text: '1. 环境变量配置', link: '/examples/1. 环境变量配置' },
             { text: '2. 核心配置', link: '/examples/2. 核心配置' },
-            { text: '3. 进阶配置', link: '/examples/3. 进阶配置' },
+            {
+              text: '3. 进阶配置',
+              collapsed: false,
+              items: [
+                { text: '1. 库模式 & build 深度配置', link: '/examples/3. 进阶配置/1. 库模式 & build 深度配置' },
+                { text: '2. 优化打包体积', link: '/examples/3. 进阶配置/2. 优化打包体积' },
+                { text: '3. 多页面配置', link: '/examples/3. 进阶配置/3. 多页面配置' },
+                { text: '4. SSR 入门', link: '/examples/3. 进阶配置/4. SSR 入门' }
+              ]
+            }
           ]
         },
       ],
@@ -83,6 +92,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概述', link: '/plugins/' },
+            { text: '1. 插件入门', link: '/plugins/1. 插件入门' }
           ]
         },
       ],
