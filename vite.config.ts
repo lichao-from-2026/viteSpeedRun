@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import copyrightPlugin from './plugins/vite-plugin-copyright'
 
 // Vite 配置文件
 // 参考文档：https://vite.dev/config/
@@ -11,7 +12,15 @@ export default defineConfig({
 
   // 插件配置
   // 使用 React 插件，提供 React 热更新等功能
-  plugins: [react()],
+  plugins: [
+    react(),
+    copyrightPlugin({
+      author: 'Your Name',
+      year: new Date().getFullYear().toString(),
+      company: 'Your Company',
+      license: 'MIT'
+    })
+  ],
 
   // 模块解析配置
   resolve: {
